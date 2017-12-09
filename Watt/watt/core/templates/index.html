@@ -1,0 +1,187 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watt</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+</head>
+<body>
+
+<div id="navbar">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <a id="logo"><img src="{% static 'imgs/Logo.png' %}" width="200vh"></a>
+    <div id="menu">
+        <a href="#">Início</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#">Serviços</a>
+        <a href="#parceiros">Parceiros</a>
+        <a href="#">Contato</a>
+        <a href="#">Blog</a>
+    </div>
+    <i class="fa fa-bars transparente" aria-hidden="true"></i>
+</div>
+
+<div class="carrosselInicial">
+
+      <div class="slides fade">
+        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <div class="carrosselTexto">WATT Consultoria</div>
+        <button class="carrosselBtn">Marcar consultoria</button>
+      </div>
+
+      <div class="slides fade">
+        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <div class="carrosselTexto">WATT Consultoria</div>
+        <button class="carrosselBtn">Marcar consultoria</button>
+      </div>
+
+      <div class="slides fade">
+        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <div class="carrosselTexto">WATT Consultoria</div>
+        <button class="carrosselBtn">Marcar consultoria</button>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+</div>
+
+<div id="empresa">
+    <h1>EMPRESA</h1>
+    <div id="inst">
+        <div id="emptxt">
+        <p>A Watt Consultoria é uma empresa júnior formada por alunos
+            dos cursos de Engenharia Elétrica e Engenharia de Controle e
+            Automação da UFPE. Foi fundada em 2015 com o intuito de
+            incentivar a capacidade empreendedora dos membros, dando
+            a eles uma postura profissional ainda dentro da Universidade,
+            fazendo com que a Watt Consultoria represente um ambiente
+            real de empresa, em contínua melhoria, que proporcione o
+            preparo necessário para o mercado de trabalho.</p>
+        <p>A empresa júnior possibilita aos seus membros desenvolvimento
+            pessoal, profissional e acadêmico, na medida em que permite a
+            aplicação de conhecimentos teóricos relativos à formação
+            profissional dos seus integrantes, os preparando para o mercado,
+            promovendo trabalho em equipe, desenvolvimento econômico e
+            social da comunidade através de suas atividades.</p>
+    </div>
+
+        <img src="{% static 'imgs/equipe.jpg' %}" width="400vw" height="300vw">
+    </div>
+
+    <div id="mvvp">
+        <div class="mvv">
+        <i class="fa fa-flag" aria-hidden="true"></i>
+        <h2>MISSÃO</h2>
+        <p>Levar aos clientes soluções em
+            engenharias elétrica e controle e
+            automação com qualidade e contribuir para
+            formação de profissionais diferenciados
+            capazes de trazer valor à sociedade.</p>
+    </div>
+        <div class="mvv">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <h2>VISÃO</h2>
+            <p>Alcançar o Cluster 2, desenvolvendo e
+                capacitando membros para mais e
+                melhores projetos.</p>
+        </div>
+        <div class="mvv">
+            <i class="fa fa-trophy" aria-hidden="true"></i>
+            <h2>VALORES</h2>
+            <p>Orgulho, Ética, Comprometimento,
+                Atitude de dono, Aprender e ensinar,
+                Transparência, Postura empreendedora.</p>
+        </div>
+    </div>
+
+</div>
+
+<div id="parceiros">
+    <div class="parceiros-titulo"> PARCEIROS </div>
+    <div class= "parceiros-container">
+        <div class= "quadrado-parceiros">
+            <a href="https://www.facebook.com/nucleo.ctg/" target="_blank"><img class= "logo-parceiros" src="{% static 'imgs/Núcleo.png' %}"></a>
+        </div>
+        <div class= "quadrado-parceiros">
+            <a href="http://www.j2mais.com.br/" target="_blank"><img class= "logo-parceiros" src="{% static 'imgs/J2+.png' %}"></a>
+        </div>
+        <div class= "quadrado-parceiros">
+            <a href="http://www.alternaenergia.com.br/" target="_blank"><img class= "logo-parceiros" src="{% static 'imgs/ALTERNA.png' %}"></a>
+        </div>
+    </div>
+</div>
+
+<!-- Mesa do footer -->
+<footer>
+    <!-- Caixa de conteúdo do footer -->
+    <div class = "footer-container">
+        <!-- Logo e barra -->
+        <div class = "beside">
+            <a href="Footer.html"> <img class = "logo" src="{% static 'imgs/Logo.png' %}"></a>
+            <div id = "barra"></div>
+        </div>
+        <!-- Contatos e Redes sociais -->
+        <div>
+            <div class = "beside">
+                <img class = "icon" src="{% static 'icons/phone.png' %}">
+                <div class="texto">(81) 9 9891-5995</div>
+            </div>
+
+            <div class = "beside" >
+                <img class = "icon" src="{% static 'icons/mail.png' %}">
+                <div class = "texto">comercial@wattconsultoria.com.br</div>
+            </div>
+            <!-- Ícones de redes sociais -->
+            <div class = "beside">
+                <a href="https://www.facebook.com/wattconsultoria/" target="_blank"><img class = "icon" src="{% static 'icons/facebook.png' %}"></a>
+                <a href="https://www.instagram.com/wattconsultoria/" target="_blank"><img id = "instagram" src="{% static 'icons/instagram.png' %}"></a>
+                <a href="https://www.linkedin.com/company-beta/16234949/" target="_blank"><img class = "icon" src="{% static 'icons/linkedin.png' %}"></a>
+            </div>
+        </div><!--Fechou Contatos e Redes Sociais -->
+
+    </div><!-- Fechou Caixa de conteúdo do footer -->
+
+</footer><!-- Fechou Mesa do footer -->
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("slides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1} 
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block"; 
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>
