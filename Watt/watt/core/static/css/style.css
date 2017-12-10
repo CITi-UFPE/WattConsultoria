@@ -118,16 +118,16 @@ button {
   position: absolute;
   top: 40%;
   width: auto;
-  padding: 16px;
-  color: white;
+  padding: 1vw;
+  color: #FAFAFA;
   font-size: 4.5vw;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 1vw 1vw 0;
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 1vw 0 0 1vw;
 }
 
 .prev:hover, .next:hover {
@@ -142,8 +142,8 @@ button {
 
 .dot {
   cursor:pointer;
-  height: 15px;
-  width: 15px;
+  height: 1.2vw;
+  width: 1.2vw;
   margin: 0 0.5%;
   background-color: #fafafa;
   border-radius: 50%;
@@ -193,7 +193,111 @@ button {
     font-size: 9vw;
   }
 }
+/*////////////////////////  MEMBROS  ////////////////////////*/
 
+.membros{
+    width: 100%;
+    background-color: #FAFAFA;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.membros > h1{
+    font-size: 3vw;
+}
+.mbr{
+    display: none;
+    width: 100%;
+    height: 100%;
+    transition: display .5s ease-in-out;
+}
+.mbr:target{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    flex-wrap: wrap;
+}
+.mbr > a > i{
+    font-size:7vw;
+    color: #2D53A2;
+    font-weight: 100;
+}
+.m5a5{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    z-index: 0;
+    position: relative;
+}
+#pg7 > div.m5a5{
+    align-items: center;
+    justify-content: center;
+}
+#pg7 > div.m5a5 >img{
+    margin-right: 5%;
+    margin-left:: 5%;
+}
+#pg7 > div.nomes{
+    align-items: center;
+    justify-content: center;
+}
+#pg7 > div.nomes > p{
+    margin-right: 5%;
+    margin-left:: 5%;
+}
+.m5a5 > img{
+    width: 12vw;
+    border-radius: 100%;
+    box-shadow: 0 0.3vh 1vh #373435;
+}
+.nomes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    z-index: 2;
+    position: absolute;
+}
+.nomess{
+    margin-top: -3.5vw;
+    background-color: rgba(250, 250, 250, 0);
+    color:rgba(250, 250, 250, 0);
+    width: 12vw;
+    height: 12vw;
+    border-radius: 100%;
+    line-height:10vw;
+}
+.nomess:hover{
+    background-color: rgba(250, 250, 250, .7);
+    transition: .5s;
+    color:#373435;
+    font-size: 1.9vw;
+    border-radius: 100%;
+}
+.atual{
+    width: 100%;
+    height: 3vw;
+    margin-top: 2.5vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.atual > a{
+    color: #2D53A2;
+    text-decoration: none;
+    margin-right: 2%;
+    font-size: 1.8vw;
+}
 /*////////////////////////  EMPRESA  ////////////////////////*/
 #empresa{
     width: 100%;
@@ -353,6 +457,119 @@ body{
         margin-top: 2vh;
         margin-bottom: 2vh;
     }
+}
+
+/*////////////////////////  DEPOIMENTOS  ////////////////////////*/
+.carrosselDepoimentos {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 3vh;
+}
+
+#depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-size: 7vh;
+    color: #373435;
+}
+
+.slidesDepoimentos {
+    display: none;
+}
+
+.depoimentosContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.depoimentosFotos {
+  width: 16%;
+  height: 16%;
+  border-radius: 50%;
+  box-shadow: 0.16vw 0.16vw 0.16vw 0.16vw gray;
+}
+
+.depoimentosTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.2vw;
+  width: 60%;
+  text-align: justify;
+}
+
+.prevDepoimentos, .nextDepoimentos {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  padding: 1vw;
+  color: #2D53A2;
+  font-size: 3vw;
+  transition: 0.6s ease;
+  border-radius: 0 1vw 1vw 0;
+}
+
+.nextDepoimentos {
+  right: 0;
+  border-radius: 1vw 0 0 1vw;
+}
+
+.prevDepoimentos:hover, .nextDepoimentos:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.dotsDepoimentos {
+  text-align: center;
+  margin-top: 3vw;
+  z-index: 1;
+}
+
+.dotDepoimentos {
+  cursor:pointer;
+  height: 1.2vw;
+  width: 1.2vw;
+  margin: 0 0.5%;
+  background-color: #fafafa;
+  border: 1px solid #373435;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotDepoimentos:hover {
+  background-color: #bbb;
+}
+
+.activeDepoimentos {
+  border: none;
+  background-color: #2D53A2;
+}
+
+@media (max-width: 100vh) {
+  .prevDepoimentos, .nextDepoimentos {
+    font-size: 5vw;
+  }
+  q {
+    text-align: right;
+    font-size: 2vw;
+  }
+  #depoimentos {
+    font-size: 5vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  .depoimentosTexto {
+    font-size: 2vw;   
+  }
 }
 
 /*////////////////////////  FOOTER  ////////////////////////*/
