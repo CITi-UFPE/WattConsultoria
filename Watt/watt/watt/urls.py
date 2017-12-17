@@ -20,5 +20,6 @@ from core.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
+    #url(r'^$', ContatoView.as_view()),
+    url(r'^$', index, name = 'home'),
 ]

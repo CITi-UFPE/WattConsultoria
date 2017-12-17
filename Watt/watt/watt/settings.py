@@ -12,6 +12,15 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+#import json
+
+#try:
+#    import environment
+#except ImportError:
+#    raise ImportError('ImportError: Please create environment.py on your project root')
+    
+from django.core.exceptions import ImproperlyConfigured
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,6 +36,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#def configure_variable(setting, fail_silently=False, default_value=None):
+#    try:
+#        return getattr(environment, setting)
+#    except AttributeError:
+#        if fail_silently:
+#            return default_value
+#        error_msg = 'ImproperlyConfigured: Set {0} variable in your environment.py file'.format(setting)
+#        raise ImproperlyConfigured(error_msg)
 
 # Application definition
 
@@ -38,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -101,6 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#RECIPIENT_EMAIL = configure_variable('RECIPIENT_EMAIL', True, 'victor_aguiar97@hotmail.com')
+
+#EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+#SENDGRID_API_KEY = configure_variable('SENDGRID_API_KEY', True, '')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -120,3 +142,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = ''
+
+STATICFILES_DIRS = ( os.path.join('static'),)
+
+TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'wattCons@gmail.com' #email do cliente
+
+EMAIL_HOST_PASSWORD = 'teslatesla' #senha do cliente

@@ -1,48 +1,54 @@
 {% load staticfiles %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <title>Watt</title>
+    <link rel="SHORTCUT ICON" href="{% static 'icons/favicon.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="navbar">
-    <i class="fa fa-bars" aria-hidden="true"></i>
-    <a id="logo"><img src="{% static 'imgs/Logo.png' %}" width="200vh"></a>
-    <div id="menu">
-        <a href="#">Início</a>
-        <a href="#empresa">Empresa</a>
-        <a href="#">Serviços</a>
-        <a href="#parceiros">Parceiros</a>
-        <a href="#">Contato</a>
-        <a href="#">Blog</a>
+    <i class="fa fa-bars" aria-hidden="true" id="sanduba"></i>
+    <a id="logo"><img src="{% static 'imgs/Logo.png' %}" width="100vh" id="watt"></a>
+    <i class="fa fa-bars transparente" aria-hidden="true" id="sanduba"></i>
+    <div id="menu" class="resp">
+        <a class="itemMenu" href="#carrosselInicial">Início</a>
+        <a class="itemMenu" href="#empresa">Empresa</a>
+        <a class="itemMenu" href="#service-container-container">Serviços</a>
+        <a class="itemMenu" href="#parceiros">Parceiros</a>
+        <a class="itemMenu" href="#contato">Contato</a>
+        <a class="itemMenu" href="#">Blog</a>
     </div>
-    <i class="fa fa-bars transparente" aria-hidden="true"></i>
 </div>
 
-<div class="carrosselInicial">
+<div class="carrosselInicial" id="carrosselInicial">
 
       <div class="slides fade">
-        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <img class="carrosselImg" src="{% static 'imgs/contateNos.jpg' %}">
+        <div class="sombreamento"></div>
         <div class="carrosselTexto">WATT Consultoria</div>
-        <button class="carrosselBtn">Marcar consultoria</button>
+        <a href="#contato"> <button class="carrosselBtn">Faça uma consultoria</button></a>
       </div>
 
       <div class="slides fade">
-        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <img class="carrosselImg" src="{% static 'imgs/institucional.jpg' %}">
+        <div class="sombreamento"></div>
         <div class="carrosselTexto">WATT Consultoria</div>
-        <button class="carrosselBtn">Marcar consultoria</button>
+        <a href="#empresa"> <button class="carrosselBtn">Conheça a empresa</button></a>
       </div>
 
       <div class="slides fade">
-        <img class="carrosselImg" src="{% static 'imgs/watt1.jpeg' %}">
+        <img class="carrosselImg2" src="{% static 'imgs/watt1.jpeg' %}">
+        <div class="sombreamento"></div>
         <div class="carrosselTexto">WATT Consultoria</div>
-        <button class="carrosselBtn">Marcar consultoria</button>
+        <a href="#service-container-container"> <button class="carrosselBtn">Conheça nossos serviços</button></a>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -76,7 +82,7 @@
             social da comunidade através de suas atividades.</p>
     </div>
 
-        <img src="{% static 'imgs/equipe.jpg' %}" width="400vw" height="300vw">
+        <img src="{% static 'imgs/AA_FOTO_OFICIAL.JPG' %}" width="400vw" height="300vw">
     </div>
 
     <div id="mvvp">
@@ -106,11 +112,83 @@
     </div>
 
 </div>
+<!--Serviços-->
+    <div id = "service-container-container">
+        <h2>SERVIÇOS</h2>
+		<div id = "service-container">
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço1.png" class = "service-img">
+                    <h3>Adequação Tarifária</h3>
+    		        <p>O serviço consiste na readequação do quadro tarifário de energia 
+    		        elétrica do consumidor visando reduzir o consumo de energia elétrica 
+    		        e consequentemente diminuir as despesas mensais.</p>
+                </div>
+                <button class = "service-button" id="adequacao">Solicitar Serviços</botton>
+		    </div>
+
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço2.png" class = "service-img">
+                    <h3>CÁLCULO LUMINOTÉCNICO</h3>
+                    <p>Com este serviço, nosso cliente terá o mais adequado projeto 
+                    de iluminação artificial em ambientes internos e externos, 
+                    visando melhor uso da iluminação ambiente, maior conforto [...]</p>
+                </div>
+		        <button class = "service-button" id="calculo">Solicitar Serviços</botton>
+		    </div>
+
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço3.png" class = "service-img">
+		            <h3>CORREÇÃO DO FATOR DE POTÊNCIA</h3>
+                    <p> Este serviço resume-se a projetar banco de capacitores 
+                    para otimizar o sistema elétrico, evitar o surgimento de 
+                    harmônicos na rede [...]</p>
+                </div>
+		        <button class = "service-button" id="correcao">Solicitar Serviços</botton>
+		    </div>
+
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço4.png" class = "service-img">
+		            <h3>EFICIÊNCIA ENERGÉTICA</h3>
+                   <p>A Watt Consultoria fornece ao cliente uma otimização 
+                   no uso dos equipamentos e no consumo de energia elétrica 
+                   garantindo qualidade e eficiência. [...]</p>
+                </div>
+		        <button class = "service-button" id="eficiencia">Solicitar Serviços</botton>
+		    </div>
+
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço5.png" class = "service-img">
+		            <h3>PROJETO DE INSTALAÇÕES ELÉTRICAS</h3>
+		            <p>Visando segurança, qualidade e adequação às normas brasileiras 
+		            de segurança, nosso serviço de instalações elétricas propõe 
+		            verificação e atualização do projeto elétrico, correção de falhas [...]</p>
+                </div>
+		        <button class = "service-button" id="projeto">Solicitar Serviços</botton>
+		    </div>
+
+		    <div class = "service-box">
+		        <div class = service-box-top>
+		            <img src = "../static/imgs/Serviço6.png" class = "service-img">
+		            <h3>VISTORIA ELÉTRICA</h3>
+                    <p>Realiza-se elaboração de um laudo técnico apresentando a avaliação e
+                    determinando a atual situação a qual se encontram as instalações elétricas 
+                    do cliente. [...].</p>
+                </div>
+		        <button class = "service-button" id="vistoria">Solicitar Serviços</button>    
+		    </div>
+		</div>
+	</div>
 <!-- Membros -->
 <div class="membros">
     <h1>MEMBROS</h1>
-    <div class="mbr fade" id="pg1">
-        <a href="#pg7"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+<div class="carrosselMembros">
+    <a class="prevMembros" onclick="plusSlidesMembros(-1)">&#10094;</a>
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src=   "{% static 'imgs/alef.png' %}">
             <img src="{% static 'imgs/amanda.png' %}">
@@ -125,19 +203,9 @@
             <p class="nomess">Emanuel</p>
             <p class="nomess">Erwin</p>
         </div>
-        <a href="#pg2"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg2">
-        <a href="#pg1"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/fernando.png' %}">
             <img src="{% static 'imgs/gabriel.png' %}">
@@ -152,19 +220,9 @@
             <p class="nomess">Jefferson</p>
             <p class="nomess">João</p>
         </div>
-        <a href="#pg3"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg3">
-        <a href="#pg2"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/john.png' %}">
             <img src="{% static 'imgs/jose.png' %}">
@@ -179,19 +237,9 @@
             <p class="nomess">Louise</p>
             <p class="nomess">Lucas</p>
         </div>
-        <a href="#pg4"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg4">
-        <a href="#pg3"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/luiz-henrique.png' %}">
             <img src="{% static 'imgs/mariana.png' %}">
@@ -206,19 +254,9 @@
             <p class="nomess">Mateus Belo</p>
             <p class="nomess">Mayara</p>
         </div>
-        <a href="#pg5"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg5">
-        <a href="#pg4"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+	
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/mayra.png' %}">
             <img src="{% static 'imgs/natan.png' %}">
@@ -233,19 +271,9 @@
             <p class="nomess">Raquel</p>
             <p class="nomess">Raul</p>
         </div>
-        <a href="#pg6"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg6">
-        <a href="#pg5"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+	
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/rayssa.png' %}">
             <img src="{% static 'imgs/ruan.png' %}">
@@ -260,19 +288,9 @@
             <p class="nomess">Thomaz</p>
             <p class="nomess">Welinton</p>
         </div>
-        <a href="#pg7"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="mbr fade" id="pg7">
-        <a href="#pg6"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+	
+	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/wesley.png' %}">
             <img src="{% static 'imgs/ze.png' %}">
@@ -281,18 +299,23 @@
             <p class="nomess">Wesley</p>
             <p class="nomess">Zé</p>
         </div>
-        <a href="#pg1"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-        <div class="atual">
-            <a href="#pg1"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg2"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg3"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg4"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg5"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg6"><i class="fa fa-circle-o" aria-hidden="true"></i></a>
-            <a href="#pg7"><i class="fa fa-circle" aria-hidden="true"></i></a>
-        </div>
-    </div>
+	</div>
+
+	<a class="nextMembros" onclick="plusSlidesMembros(1)">&#10095;</a>
+
+	<div class="dotsMembros">
+	  <span class="dotMembros" onclick="currentSlideMembros(1)"></span> 
+	  <span class="dotMembros" onclick="currentSlideMembros(2)"></span> 
+	  <span class="dotMembros" onclick="currentSlideMembros(3)"></span> 
+	  <span class="dotMembros" onclick="currentSlideMembros(4)"></span>
+	  <span class="dotMembros" onclick="currentSlideMembros(5)"></span>
+	  <span class="dotMembros" onclick="currentSlideMembros(6)"></span>
+	  <span class="dotMembros" onclick="currentSlideMembros(7)"></span>
+	</div>
+	
 </div>
+</div>
+
 
 <!-- Parceiros -->
 <div id="parceiros">
@@ -309,6 +332,7 @@
         </div>
     </div>
 </div>
+
 
 <!--Depoimentos-->
 <div id="depoimentos"> DEPOIMENTOS </div>
@@ -396,6 +420,65 @@
 	
 </div>
 
+
+<!--                 FORM DE CONTATO                 -->
+<div id="contato">
+    <div class="contato-titulo"> CONTATO </div>
+    <div class="formEmap">
+        <div class="contatoForm">
+            <form method = "POST" id="formForm">
+        		{% csrf_token %}
+        		<div class="contatoRow">
+            		<input class="formInputs" type="text" name="nome" placeholder=" Nome " required=required><br>
+            		<input class="formInputs" type="text" name="telefone" placeholder=" Telefone " required=required><br>
+        		</div>
+        		<div class="contatoRow">
+            		<input class="formInputs" type="email" name="email" placeholder=" Email " required=required><br>
+            		<input class="formInputs" type="text" name="assunto" placeholder=" Assunto " required=required><br>
+        		</div>
+        		<div class="contatoRow2">
+            		<textarea class="formInputs formInputs2" name="mensagem" placeholder=" Mensagem " required=required></textarea>
+        		</div>
+        		<div class="contatoRow3">
+            		<button class="button-send" type="submit">Enviar</button>
+        		</div>
+        	</form>
+        </div>
+        <div class="contatoMapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4666744836854!2d-34.95680204961078!3d-8.053786682657448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1be1662deabf%3A0x8d83bd2aa90799db!2sWatt+Consultoria!5e0!3m2!1spt-BR!2sbr!4v1513195421171" width="450vw" height="390vh" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="idmodal not" id="contatoModal">
+<div class="modal">
+    <i class="fa fa-times not" aria-hidden="true" id="closeModal"></i>
+    <div class="textmod">
+        <h3 id="title"></h3>
+        <p id="paragrafo1"></p>
+        <h4 id="pl1"></h4>
+        <p id="paragrafo2"></p>
+        <h4 id="pl2"></h4>
+        <p id="paragrafo3"></p>
+    </div>
+    <div class="formmod">
+        <h3>Fale com um consultor</h3>
+        <p>Complete o formulário abaixo que um
+            consultor especializado entrará em contato
+            para te passar todas as informações
+            necessárias sobre esse serviço.</p>
+        <form method="post">
+            <input type="text" name="Nome" placeholder="Nome">
+            <input type="text" name="Email" placeholder="Email">
+            <input type="text" name="Telefone" placeholder="Telefone">
+            <button>ENVIAR</button>
+        </form>
+        <div>
+            <p>(81) 9 9891-5995</p>
+            <p>comercial@wattconsultoria.com.br</p>
+        </div>
+    </div>
+</div>
+</div>
 <!-- Mesa do footer -->
 <footer>
     <!-- Caixa de conteúdo do footer -->
