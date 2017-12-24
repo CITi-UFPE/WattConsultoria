@@ -16,7 +16,7 @@
 
 <div id="navbar">
     <i class="fa fa-bars" aria-hidden="true" id="sanduba"></i>
-    <a id="logo"><img src="{% static 'imgs/Logo.png' %}" width="100vh" id="watt"></a>
+    <a id="logo" href="#carrosselInicial"><img src="{% static 'imgs/Logo.png' %}" width="100vh" id="watt"></a>
     <i class="fa fa-bars transparente" aria-hidden="true" id="sanduba"></i>
     <div id="menu" class="resp">
         <a class="itemMenu" href="#carrosselInicial">Início</a>
@@ -293,11 +293,9 @@
 	<div class="slidesMembros fade">
         <div class="m5a5">
             <img src="{% static 'imgs/wesley.png' %}">
-            <img src="{% static 'imgs/ze.png' %}">
         </div>
         <div class="nomes">
             <p class="nomess">Wesley</p>
-            <p class="nomess">Zé</p>
         </div>
 	</div>
 
@@ -429,18 +427,18 @@
             <form method = "POST" id="formForm">
         		{% csrf_token %}
         		<div class="contatoRow">
-            		<input class="formInputs" type="text" name="nome" placeholder=" Nome " required=required><br>
-            		<input class="formInputs" type="text" name="telefone" placeholder=" Telefone " required=required><br>
+            		<input class="formInputs" type="text" name="nome" placeholder=" Nome " required=required id="nome"><br>
+            		<input class="formInputs" type="text" name="telefone" placeholder=" Telefone " required=required id="telefone"><br>
         		</div>
         		<div class="contatoRow">
-            		<input class="formInputs" type="email" name="email" placeholder=" Email " required=required><br>
-            		<input class="formInputs" type="text" name="assunto" placeholder=" Assunto " required=required><br>
+            		<input class="formInputs" type="email" name="email" placeholder=" Email " required=required id="email"><br>
+            		<input class="formInputs" type="text" name="assunto" placeholder=" Assunto " required=required id="assunto"><br>
         		</div>
         		<div class="contatoRow2">
-            		<textarea class="formInputs formInputs2" name="mensagem" placeholder=" Mensagem " required=required></textarea>
+            		<textarea class="formInputs formInputs2" name="mensagem" placeholder=" Mensagem " required=required id="mensagem"></textarea>
         		</div>
         		<div class="contatoRow3">
-            		<button class="button-send" type="submit">Enviar</button>
+            		<button class="button-send" type="submit" id="submit">Enviar</button>
         		</div>
         	</form>
         </div>
@@ -466,11 +464,11 @@
             consultor especializado entrará em contato
             para te passar todas as informações
             necessárias sobre esse serviço.</p>
-        <form method="post">
-            <input type="text" name="Nome" placeholder="Nome">
-            <input type="text" name="Email" placeholder="Email">
-            <input type="text" name="Telefone" placeholder="Telefone">
-            <button>ENVIAR</button>
+        <form>
+            <input type="text" name="Nome" placeholder="Nome" id="nomeModal">
+            <input type="text" name="Email" placeholder="Email" id="emailModal">
+            <input type="text" name="Telefone" placeholder="Telefone" id="telModal">
+            <button id="botaoModal">ENVIAR</button>
         </form>
         <div>
             <p>(81) 9 9891-5995</p>
@@ -485,7 +483,7 @@
     <div class = "footer-container">
         <!-- Logo e barra -->
         <div class = "beside">
-            <a href="Footer.html"> <img class = "logo" src="{% static 'imgs/Logo.png' %}"></a>
+            <a href="#carrosselInicial"> <img class = "logo" src="{% static 'imgs/Logo.png' %}"></a>
             <div id = "barra"></div>
         </div>
         <!-- Contatos e Redes sociais -->

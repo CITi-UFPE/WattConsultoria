@@ -25,10 +25,11 @@ button {
 #closeModal{
     position: fixed;
     z-index: 21;
-    top:0;
-    right:0;
+    top:5px;
+    right:10px;
     font-size:5vh;
     color:#FAFAFA;
+    cursor:pointer;
 }
 
 .modal{
@@ -168,6 +169,10 @@ button {
     font-size: 2.5vh;
     margin: .7vw;
 }
+#menu > a:hover{
+    color: #2D53A2;
+    transition: color .3s linear;
+}
 #navbar>i{
     font-size: 7vh;
     display: none;
@@ -199,7 +204,6 @@ button {
     #navbar{
         background-color: #FAFAFA;
         flex-wrap: wrap;
-        justify-items: ;
     }
 }
 
@@ -340,12 +344,17 @@ button {
   .carrosselImg {
     height: 50vh;
   }
+  .carrosselImg2 {
+    height: 50vh;
+  }
   .carrosselTexto {
-    font-size: 7vh;
+    font-size: 6vh;
   }
   .carrosselBtn {
     font-size: 2vh;
     width:40%;
+    margin-left:30%;
+    margin-right:30%;
   }
   .prev, .next {
     font-size: 9vw;
@@ -695,6 +704,10 @@ body{
     #service-container{
         width: 90%;
     }
+    
+    #service-container-container h2{
+        font-size: 7vh;
+    }
 }
 
 
@@ -705,6 +718,9 @@ body{
         
     }
     
+    #service-container-container h2{
+        font-size: 7vh;
+    }
     
 }
 
@@ -718,6 +734,10 @@ body{
     .button{
         font-size: 1.8vh;
     }
+    
+    #service-container-container h2{
+        font-size: 7vh;
+    }
 }
 
 @media (max-height: 600px) and (orientation: landscape){
@@ -730,6 +750,10 @@ body{
     .service-button{
         font-size: 1.8vh;
         width: 18vh
+    }
+    
+    #service-container-container h2{
+        font-size: 7vh;
     }
 }
 
@@ -749,6 +773,14 @@ body{
     
     .service-button{
         margin-top:2vh;
+    }
+    
+    #service-container-container h2{
+        font-size: 5vw;
+    }
+    
+    #service-container {
+        margin-bottom: 5vh;
     }
 }
 
@@ -801,6 +833,9 @@ body{
         font-size: 5vw;
         margin-top: 10vh;
         margin-bottom: 2vh;
+    }
+    .parceiros-container {
+        margin-bottom: 5vh;
     }
 }
 
@@ -921,16 +956,16 @@ body{
 #contato {
     display: flex;
     flex-direction:column;
+    align-items:center;
     color: #fafafa;
     background-color:#373435;
 }
 .contato-titulo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-top: 4vh;
+    margin-top: 10vh;
     margin-bottom: 4vh;
-    margin-left: 6vh;
     font-size: 7vh;
     color: white;
 }
@@ -938,10 +973,12 @@ body{
     background-color: #373435;
     font-family: Roboto;
     display: flex;
+    justify-content: space-between;
     width:90%;
     margin-bottom: 4vh;
     margin-left:6vh;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
+    
 }
 .contatoForm {
     display:flex;
@@ -1006,18 +1043,20 @@ form {
     align-self: flex-end;
     cursor:pointer;
 }
-@media(max-width: 200vh){
+@media(max-width: 100vh){
     .contato-titulo {
         font-size:5vw;
-        margin-top: 2vh;
+        margin-top: 10vh;
         margin-bottom: 2vh;
         justify-content:center;
         margin-left:0;
+        align-self:center;
     }
     .formEmap {
         flex-direction:column;
         margin-left:0;
         align-items:center;
+        width:100%;
     }
     .contatoForm {
         width:80%;
@@ -1030,6 +1069,19 @@ form {
     }
     .button-send{
         width: 25%;
+    }
+    iframe {
+        width:90vw;
+        border-radius:15px;
+    }
+}
+
+@media(max-width:150vh) {
+    .formEmap {
+        flex-direction:column;
+        margin-left:0;
+        align-items:center;
+        width:100%;
     }
 }
 
