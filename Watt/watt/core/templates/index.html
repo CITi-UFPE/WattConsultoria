@@ -19,11 +19,11 @@
     <a id="logo" href="#carrosselInicial"><img src="{% static 'imgs/Logo.png' %}" width="100vh" id="watt"></a>
     <i class="fa fa-bars transparente" aria-hidden="true" id="sanduba"></i>
     <div id="menu" class="resp">
-        <a class="itemMenu" href="#carrosselInicial">Início</a>
-        <a class="itemMenu" href="#empresa">Empresa</a>
-        <a class="itemMenu" href="#service-container-container">Serviços</a>
-        <a class="itemMenu" href="#parceiros">Parceiros</a>
-        <a class="itemMenu" href="#contato">Contato</a>
+        <a class="itemMenu" href="#carrosselInicial" id="ini">Início</a>
+        <a class="itemMenu" href="#empresa" id="emp">Empresa</a>
+        <a class="itemMenu" href="#service-container-container" id="serv">Serviços</a>
+        <a class="itemMenu" href="#parceiros" id="par">Parceiros</a>
+        <a class="itemMenu" href="#contato" id="cont">Contato</a>
         <a class="itemMenu" href="#">Blog</a>
     </div>
 </div>
@@ -227,74 +227,61 @@
             <img src="{% static 'imgs/john.png' %}">
             <img src="{% static 'imgs/jose.png' %}">
             <img src="{% static 'imgs/levy.png' %}">
-            <img src="{% static 'imgs/louise.png' %}">
             <img src="{% static 'imgs/lucas.png' %}">
+            <img src="{% static 'imgs/luiz-henrique.png' %}">
         </div>
         <div class="nomes">
             <p class="nomess">John</p>
             <p class="nomess">José</p>
             <p class="nomess">Levy</p>
-            <p class="nomess">Louise</p>
             <p class="nomess">Lucas</p>
+            <p class="nomess">Luiz Henrique</p>
         </div>
 	</div>
 
 	<div class="slidesMembros fade">
         <div class="m5a5">
-            <img src="{% static 'imgs/luiz-henrique.png' %}">
             <img src="{% static 'imgs/mariana.png' %}">
             <img src="{% static 'imgs/mateus-alves.png' %}">
             <img src="{% static 'imgs/mateus-belo.png' %}">
             <img src="{% static 'imgs/mayara.png' %}">
+            <img src="{% static 'imgs/mayra.png' %}">
         </div>
         <div class="nomes">
-            <p class="nomess">Luiz Henrique</p>
             <p class="nomess">Mariana</p>
             <p class="nomess">Mateus Alves</p>
             <p class="nomess">Mateus Belo</p>
             <p class="nomess">Mayara</p>
+            <p class="nomess">Mayra</p>
         </div>
 	</div>
 	
 	<div class="slidesMembros fade">
         <div class="m5a5">
-            <img src="{% static 'imgs/mayra.png' %}">
             <img src="{% static 'imgs/natan.png' %}">
             <img src="{% static 'imgs/neto.png' %}">
             <img src="{% static 'imgs/raquel.png' %}">
             <img src="{% static 'imgs/raul.png' %}">
+            <img src="{% static 'imgs/rayssa.png' %}">
         </div>
         <div class="nomes">
-            <p class="nomess">Mayra</p>
             <p class="nomess">Natan</p>
             <p class="nomess">Neto</p>
             <p class="nomess">Raquel</p>
             <p class="nomess">Raul</p>
-        </div>
-	</div>
-	
-	<div class="slidesMembros fade">
-        <div class="m5a5">
-            <img src="{% static 'imgs/rayssa.png' %}">
-            <img src="{% static 'imgs/ruan.png' %}">
-            <img src="{% static 'imgs/saullo.png' %}">
-            <img src="{% static 'imgs/thomaz.png' %}">
-            <img src="{% static 'imgs/weliton.png' %}">
-        </div>
-        <div class="nomes">
             <p class="nomess">Rayssa</p>
-            <p class="nomess">Ruan</p>
-            <p class="nomess">Saullo</p>
-            <p class="nomess">Thomaz</p>
-            <p class="nomess">Welinton</p>
         </div>
 	</div>
 	
 	<div class="slidesMembros fade">
         <div class="m5a5">
+            <img src="{% static 'imgs/ruan.png' %}">
+            <img src="{% static 'imgs/thomaz.png' %}">
             <img src="{% static 'imgs/wesley.png' %}">
         </div>
         <div class="nomes">
+            <p class="nomess">Ruan</p>
+            <p class="nomess">Thomaz</p>
             <p class="nomess">Wesley</p>
         </div>
 	</div>
@@ -308,7 +295,6 @@
 	  <span class="dotMembros" onclick="currentSlideMembros(4)"></span>
 	  <span class="dotMembros" onclick="currentSlideMembros(5)"></span>
 	  <span class="dotMembros" onclick="currentSlideMembros(6)"></span>
-	  <span class="dotMembros" onclick="currentSlideMembros(7)"></span>
 	</div>
 	
 </div>
@@ -438,7 +424,7 @@
             		<textarea class="formInputs formInputs2" name="mensagem" placeholder=" Mensagem " required=required id="mensagem"></textarea>
         		</div>
         		<div class="contatoRow3">
-            		<button class="button-send" type="submit" id="submit">Enviar</button>
+            		<button class="button-send" type="submit" id="submit" name="geral">Enviar</button>
         		</div>
         	</form>
         </div>
@@ -464,11 +450,13 @@
             consultor especializado entrará em contato
             para te passar todas as informações
             necessárias sobre esse serviço.</p>
-        <form>
-            <input type="text" name="Nome" placeholder="Nome" id="nomeModal">
-            <input type="text" name="Email" placeholder="Email" id="emailModal">
-            <input type="text" name="Telefone" placeholder="Telefone" id="telModal">
-            <button id="botaoModal">ENVIAR</button>
+        <form method = "POST" id="formFormEsp">
+            {% csrf_token %}
+            <input type="text" name="nomeModal" placeholder="Nome" required=required id="nomeModal">
+            <input type="text" name="emailModal" placeholder="Email" required=required id="emailModal">
+            <input type="text" name="telModal" placeholder="Telefone" required=required id="telModal">
+            <input type="text" name="assuntoModal" id="assuntoModal">
+            <button type="submit" id="botaoModal" name="especifico">ENVIAR</button>
         </form>
         <div>
             <p>(81) 9 9891-5995</p>

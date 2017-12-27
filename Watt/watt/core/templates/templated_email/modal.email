@@ -3,5 +3,4 @@
 E-mail enviado por: {{ nome }}
 E-mail do contato: {{email}}
 O telefone de {{nome}} é: {{telefone}}
-Mensagem: {{ mensagem }}
 {% endblock %}
