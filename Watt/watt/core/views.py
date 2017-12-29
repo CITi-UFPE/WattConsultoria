@@ -4,6 +4,7 @@ from .models import *
 from django.http import HttpResponseRedirect, HttpResponse
 from templated_email import send_templated_mail
 from django.core.urlresolvers import reverse_lazy
+#from django.urls import reverse_lazy (substituir por este, caso nao execute corretamente pelo cmd)
 from django.conf import settings
 
 # Create your views here.
