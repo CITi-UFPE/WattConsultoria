@@ -396,7 +396,8 @@ button {
 }
 .membros > h1{
     font-size: 7vh;
-    margin-top:5vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 .carrosselMembros{
     display: flex;
@@ -418,6 +419,7 @@ button {
     font-size:5vw;
     cursor: pointer;
     color: #2D53A2;
+    margin-bottom: 1.1vh;
 }
 
 .carrosselMembros > a : hover{
@@ -433,13 +435,15 @@ button {
     justify-content: space-around;
     flex-direction: row;
     z-index: 0;
-    height: 14vw;
+    height: 17vw;
 }
 .ImgNome{
     position: relative;
     display: flex;
     flex-direction:column;
     align-items:center;
+    width:20%;
+    height:14vw;
 }
 .ImgNome > img{
     width: 12vw;
@@ -468,7 +472,6 @@ button {
     color:#373435;
     border-radius: 100%;
 }
-
 h1{
     font-weight: normal;
 }
@@ -519,12 +522,17 @@ h1{
 @media (max-width: 100vh){
     .membros > h1{
         font-size:5vw;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
     }
     .ImgNome > p{
         font-size: 1.9vw;
     }
     .nomess{
         font-size: 1.9vw;
+    }
+    .dotsMembros {
+        margin-top: 4vw;
     }
 }
 /*////////////////////////  EMPRESA  ////////////////////////*/
