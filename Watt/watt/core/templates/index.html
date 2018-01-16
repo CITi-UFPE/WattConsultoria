@@ -580,7 +580,7 @@
         <form method = "POST" id="formFormEsp">
             {% csrf_token %}
             <input type="text" name="nomeModal" placeholder="Nome" required=required id="nomeModal">
-            <input type="text" name="emailModal" placeholder="Email" required=required id="emailModal">
+            <input type="email" name="emailModal" placeholder="Email" required=required id="emailModal">
             <input type="text" name="telModal" placeholder="Telefone" required=required id="telModal">
             <input type="text" name="assuntoModal" id="assuntoModal">
             <button type="submit" id="botaoModal" name="especifico">ENVIAR</button>
