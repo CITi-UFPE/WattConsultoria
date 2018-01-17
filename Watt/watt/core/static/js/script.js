@@ -232,7 +232,7 @@ setInterval(function(){
 },10);
 
 function verificPos(){
-  var scroll = $(document).scrollTop() + 2;
+  var scroll = $(document).scrollTop() + $("#navbar").height();
   if($("#empresa").position().top > scroll){
     $("#ini").addClass("select");
     $("#emp").removeClass("select");

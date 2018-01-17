@@ -224,6 +224,20 @@ button {
     }
 }
 
+img{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
 /*////////////////////////  1º CARROSSEL  ////////////////////////*/
 .carrosselInicial {
   display: flex;
@@ -465,6 +479,7 @@ button {
     justify-content:center;
     align-items:center;
     font-size: 1.25vw;
+    left:12%;
 }
 .nomess:hover{
     background-color: rgba(250, 250, 250, .7);
@@ -1018,9 +1033,6 @@ body{
     justify-content:center;
     width:50%;
 }
-iframe{
-    border-radius: 6%;
-}
 .contatoRow {
     display:flex;
     justify-content:space-between;
@@ -1034,7 +1046,7 @@ iframe{
     justify-content:flex-end;
 }
 form {
-    height:100%;
+    height:48%;
 }
 .formInputs {
     box-shadow: 0 0.3vh 1vh #000000;
