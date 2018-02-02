@@ -19,7 +19,7 @@ def index(request):
             send_templated_mail(
             template_name='email',
             from_email=email,
-            recipient_list=['victor_aguiar97@hotmail.com'],
+            recipient_list=['marketing@wattconsultoria.com.br'],
             context={
                 'nome': nome,
                 'telefone': telefone,
@@ -37,7 +37,7 @@ def index(request):
             send_templated_mail(
             template_name='modal',
             from_email=email,
-            recipient_list=['victor_aguiar97@hotmail.com'],
+            recipient_list=['marketing@wattconsultoria.com.br'],
             context={
                 'nome': nome,
                 'telefone': telefone,
