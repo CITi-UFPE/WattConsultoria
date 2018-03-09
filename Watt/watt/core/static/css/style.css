@@ -1142,6 +1142,10 @@ footer{
     height: 100%;
     margin-left: 60px;
 }
+.bar a{
+    text-decoration: none;
+    color: #8cba4e;
+}
 
 @media (max-width: 100vh) {
     
