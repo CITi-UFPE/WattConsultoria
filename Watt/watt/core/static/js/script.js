@@ -225,11 +225,14 @@ setInterval(function(){
   wid = $(window).width();
   hei = $(window).height();
   if((wid!=widAn)||(hei!=heiAn)){
-    verificaRes();
     widAn=wid;
     heiAn=hei;
   }
 },10);
+
+$(document).on( 'scroll', function(){
+        verificPos();
+    });
 
 function verificPos(){
   var scroll = $(document).scrollTop() + $("#navbar").height();

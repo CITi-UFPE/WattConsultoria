@@ -204,15 +204,18 @@ button {
         width: 100%;
     }
     #menu > a{
-        width: 95%;
-        margin-top: 3%;
+        width: 100%;
+        padding: 1%;
+        margin-top: 0;
+
     }
     .resp{
         display: none !important;
     }
     #navbar>i{
-        font-size: 4vh;
+        font-size: 5vh;
         display: block;
+        margin-right: 4vw;
         justify-self: flex-start;
     }
     #navbar>img{
@@ -308,7 +311,6 @@ img{
   color: #FAFAFA;
   font-size: 4.5vw;
   transition: 0.6s ease;
-  border-radius: 0 1vw 1vw 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -319,7 +321,6 @@ img{
 
 .next {
   right: 0;
-  border-radius: 1vw 0 0 1vw;
 }
 
 .prev:hover, .next:hover {
@@ -409,7 +410,7 @@ img{
     text-align: center;
 }
 .membros > h1{
-    font-size: 7vh;
+    font-size: 4vh;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
@@ -495,14 +496,12 @@ h1{
     color: #2D53A2;
     font-size: 3vw;
     transition: 0.6s ease;
-    border-radius: 0 1vw 1vw 0;
 }
 .nextMembros{
     padding: 1vw;
     color: #2D53A2;
     font-size: 3vw;
     transition: 0.6s ease;
-    border-radius: 1vw 0 0 1vw;
 }
 .prevMembros:hover, .nextMembros:hover {
     background-color: rgba(0,0,0,0.1);
@@ -556,7 +555,7 @@ h1{
     z-index: -3;
     text-align: center;
     display: flex;
-    font-size: 1.35vw;
+    font-size: 1vw;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 5%;
@@ -567,19 +566,19 @@ h1{
     margin-bottom: 4%;
     margin-top: 10vh;
     justify-items: center;
-    font-size: 7vh;
+    font-size: 4vh;
 }
 #emptxt{
     width: 50%;
     align-self: center;
     text-align: justify;
     display: flex;
+    font-size: 1.35vw;
     flex-direction: column;
 }
 #inst > img{
     width:36vw;
     height:27vw;
-    border-radius: 3%;
     box-shadow: 0 0.3vh 1vh #373435;
 }
 #mvvp{
@@ -604,7 +603,6 @@ h1{
     background: #FAFAFA;
     text-align: center !important;
     box-shadow: 0 0.3vh 1vh #373435;
-    border-radius: 2vw;
     padding-top: 2vw;
     height: 100%;
 }
@@ -613,7 +611,7 @@ h1{
     font-size: 1.25vw;
 }
 .mvv > i{
-    font-size: 8vw;
+    font-size: 5vw;
     color: #2D53A2;
 }
 body{
@@ -632,7 +630,7 @@ body{
         font-size: 3vw;
     }
     .mvv > i{
-        font-size: 14vw;
+        font-size: 11vw;
     }
     #mvvp{
         align-items: center;
@@ -655,7 +653,6 @@ body{
     #inst > img{
         width:53.3vw;
         height:40vw;
-        border-radius: 10%;
     }
     h1{
         font-size: 5vw;
@@ -667,14 +664,14 @@ body{
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: #373435;
+        background: linear-gradient(#FAFAFA 20% , #373435 0 , #373435 85%, #373435 0, #FAFAFA 85%);
         align-items:center;
 }
 
 #service-container-container h2{
     text-align: center;
-    color: white;
-    font-size: 7vh;
+    color: #373435;
+    font-size: 4vh;
     font-weight: normal;
     margin-top: 10vh;
 }
@@ -683,10 +680,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    background-color: white;
+    width: 85%;
     font-family: ROBOTO;
-    background-color: #373435;
     margin-bottom: 10vh;
 }
 .service-box{
@@ -695,17 +690,15 @@ body{
     justify-content:space-between;
     text-align: center;
     flex-direction: column;
-    box-shadow: 0 0.3vh 1vh #373435;
-    border-radius: 2vw;
-    flex-basis: 20%;
+    flex-basis: 30%;
+    margin-top: 1vh;
     background-color: white;
-    margin: 3vw;
     font-size: 1.8vh;
-    color: gray;
+    color: #373435;
 }
 
+
 .service-box p{
-    margin: 1vw;
     text-align: center;
 }
 
@@ -714,13 +707,16 @@ body{
     justify-content:flex-start;
     text-align: center;
 }
+.gray{
+    background-color: #D0D0D0;
+}
 
 .service-img{
     display: flex;
+    height: 23vh;
+    object-fit: cover;
     justify-content: center;
     width: 100%;
-    border-top-left-radius: 2vw;
-    border-top-right-radius: 2vw;
 }
 
 .service-button{
@@ -728,7 +724,6 @@ body{
     width: 20vh;
     height: 5vh;
     color: white;
-    border-radius: 1vh;
     background-color: #264f96;
     border:0;
     margin-bottom: 2vh;
@@ -738,77 +733,21 @@ body{
 }
 
 
-@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10){
-    .service-box{
-        flex-basis:22%;
-        margin:3vw;
-    }
-    
-    #service-container{
-        width: 90%;
-    }
-    
-    #service-container-container h2{
-        font-size: 7vh;
-    }
-}
-
-
-@media (max-width: 180vh){
-    .service-box{
-        flex-basis:26%;
-        margin: 2vh;
-        
-    }
-    
-    #service-container-container h2{
-        font-size: 7vh;
-    }
-    
-}
-
-@media (max-width: 140vh){
-    .service-box{
-        flex-basis:24%;
-        margin: 1vw;
-        font-size: 1.5vh;
-    }
-    
-    .button{
-        font-size: 1.8vh;
-    }
-    
-    #service-container-container h2{
-        font-size: 7vh;
-    }
-}
-
-@media (max-height: 600px) and (orientation: landscape){
-    .service-box{
-        flex-basis: 28%;
-        font-size: 2.4vh;
-        margin: 1vw;
-    }
-    
-    .service-button{
-        font-size: 1.8vh;
-        width: 18vh
-    }
-    
-    #service-container-container h2{
-        font-size: 7vh;
-    }
-}
-
 @media (max-width: 100vh){
 
     .service-box{
         flex-basis: 42%;
         margin-top: 2vh;
+        background-color: #D0D0D0;
 
     }
     .service-box-top > h3{
         display:none;
+    }
+    .service-img{
+    object-fit: contain;
+    height: auto;
+        
     }
     .service-box-top > p{
         display:none;
@@ -818,8 +757,12 @@ body{
         margin-top:2vh;
     }
     
+    #service-container-container{
+        background: #373435 !important;
+    }
     #service-container-container h2{
         font-size: 5vw;
+        color: #FFFFFF;
     }
     
     #service-container {
@@ -841,7 +784,7 @@ body{
     align-items: center;
     margin-top: 10vh;
     margin-bottom: 6vh;
-    font-size: 7vh;
+    font-size: 4vh;
     color: white;
 }
 
@@ -861,7 +804,6 @@ body{
     background-color: white;
     width: 18vw;
     height: 18vw;
-    border-radius: 1.5vw 1.5vw;
     justify-content: center;
     align-items: center;
 }
@@ -898,7 +840,7 @@ body{
     align-items: center;
     margin-top: 4vh;
     margin-bottom: 4vh;
-    font-size: 7vh;
+    font-size: 4vh;
     color: #373435;
 }
 
@@ -939,12 +881,10 @@ body{
   color: #2D53A2;
   font-size: 5vw;
   transition: 0.6s ease;
-  border-radius: 0 1vw 1vw 0;
 }
 
 .nextDepoimentos {
   right: 0;
-  border-radius: 1vw 0 0 1vw;
 }
 
 .prevDepoimentos:hover, .nextDepoimentos:hover {
@@ -1009,7 +949,7 @@ body{
     align-items: center;
     margin-top: 10vh;
     margin-bottom: 4vh;
-    font-size: 7vh;
+    font-size: 4vh;
     color: white;
 }
 .formEmap {
@@ -1049,7 +989,6 @@ form {
     height:48%;
 }
 .formInputs {
-    box-shadow: 0 0.3vh 1vh #000000;
     width: 50%;
     padding-left: 1%;
     padding-right: 1%;
@@ -1060,20 +999,19 @@ form {
     margin-bottom: 2vh;
     border: none;
     font-size: 2.8vh;
-    border-radius: 15px;
     height: 6vh;
 }
 .formInputs2 {
     width:100%;
     resize:none;
+    font-family: Roboto;
     height:22vh;
 }
 .button-send{
     width: 20%;
-    border-radius: 15px;
     border: none;
     height: 6vh;
-    box-shadow: 0 0.3vh 1vh #000000;
+    box-shadow: 2px 3px 9px #21202066;
     margin:4%;
     font-size: 3vh;
     margin-top: 4vh;
@@ -1098,6 +1036,10 @@ form {
         align-items:center;
         width:100%;
     }
+    .formInputs{
+        height: 5vh;
+        margin-top: 0;
+    }
     .contatoForm {
         width:80%;
     }
@@ -1105,14 +1047,14 @@ form {
         width:100%;    
     }
     .formInputs2 {
-        height:10vh;
+        height:15vh;
+        margin-bottom: 0;
     }
     .button-send{
         width: 25%;
     }
     iframe {
         width:90vw;
-        border-radius:15px;
     }
 }
 
@@ -1129,6 +1071,7 @@ form {
 footer{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-content: center;
     background-color: #fafafa;
     width: 100%;
@@ -1142,10 +1085,31 @@ footer{
     width: 88%;
 }
 
+.bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 3vw;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 1);
+    color: #C0C0C0;
+    opacity: 0.9; 
+}
+    
+    @media (min-width: 888px) {
+      .footer .bar {
+        font-size: inherit;
+        padding: 8px 50px; 
+          
+      } }
+    .bar i {
+      color: #92D050; }
+      
+
 .icon{
     width: 3.5vh;
     height: 3.5vh;
-    border-radius: 3px;
     margin: 1vh;
 }
 
@@ -1169,7 +1133,6 @@ footer{
 #instagram{
     width: 3.9vh;
     height: 3.9vh;
-    border-radius: 20px;
     margin: 1vh;
 }
 
