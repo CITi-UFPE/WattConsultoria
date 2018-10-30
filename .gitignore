@@ -1,0 +1,5 @@
+venv
+core/__pycache__/
+.vscode
+watt/__pycache__/
+core/migrations/__pycache__/
