@@ -602,7 +602,7 @@ h1{
     margin-top: 0;
     background: #FAFAFA;
     text-align: center !important;
-    box-shadow: 0 0.3vh 1vh #373435;
+    box-shadow: 0px 1px 6px 0px rgba(55,52,53,1);
     padding-top: 2vw;
     height: 100%;
 }
@@ -653,6 +653,7 @@ body{
     #inst > img{
         width:53.3vw;
         height:40vw;
+        margin-bottom: 35px;
     }
     h1{
         font-size: 5vw;
